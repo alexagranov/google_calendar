@@ -495,9 +495,9 @@ class TestGoogleCalendar < Minitest::Test
     setup do
       @client_mock = setup_mock_client
 
-      @client_id = "671053090364-ntifn8rauvhib9h3vnsegi6dhfglk9ue.apps.googleusercontent.com"
-      @client_secret = "roBgdbfEmJwPgrgi2mRbbO-f"
-      @refresh_token = "1/eiqBWx8aj-BsdhwvlzDMFOUN1IN_HyThvYTujyksO4c"
+      @client_id = ENV['CLIENT_ID']
+      @client_secret = ENV['CLIENT_SECRET']
+      @refresh_token = ENV['REFRESH_TOKEN']
 
       @calendar_list = Google::CalendarList.new(
         :client_id => @client_id,
@@ -549,9 +549,9 @@ class TestGoogleCalendar < Minitest::Test
     setup do
       @client_mock = setup_mock_client
 
-      @client_id = "671053090364-ntifn8rauvhib9h3vnsegi6dhfglk9ue.apps.googleusercontent.com"
-      @client_secret = "roBgdbfEmJwPgrgi2mRbbO-f"
-      @refresh_token = "1/eiqBWx8aj-BsdhwvlzDMFOUN1IN_HyThvYTujyksO4c"
+      @client_id = ENV['CLIENT_ID']
+      @client_secret = ENV['CLIENT_SECRET']
+      @refresh_token = ENV['REFRESH_TOKEN']
 
       @freebusy = Google::Freebusy.new(
         :client_id => @client_id,
